@@ -1,0 +1,14 @@
+{
+  "name": "oracle-at-node",
+  "version": "0.0.1",
+  "description": "testing oracle db on node from inside docker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chaos Engine",
+  "license": "ISC",
+  "dependencies": {
+    "oracledb": "^5.1.0"
+  }
+}
