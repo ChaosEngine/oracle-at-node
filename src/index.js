@@ -17,7 +17,6 @@ async function run() {
 	let connection;
 
 	try {
-
 		let sql, binds, options, result;
 
 		connection = await oracledb.getConnection(dbConfig);
@@ -25,7 +24,6 @@ async function run() {
 		//
 		// Create a table
 		//
-
 		const stmts = [
 			`DROP TABLE no_example`,
 
@@ -44,15 +42,12 @@ async function run() {
 		//
 		// Insert three rows
 		//
-
 		sql = `INSERT INTO no_example VALUES (:1, :2)`;
-
 		binds = [
 			[101, "Alpha"],
 			[102, "Beta"],
 			[103, "Gamma"]
 		];
-
 		// For a complete list of options see the documentation.
 		options = {
 			autoCommit: true,
@@ -70,11 +65,8 @@ async function run() {
 		//
 		// Query the data
 		//
-
 		sql = `SELECT * FROM no_example`;
-
 		binds = {};
-
 		// For a complete list of options see the documentation.
 		options = {
 			outFormat: oracledb.OUT_FORMAT_OBJECT,   // query result format
@@ -93,7 +85,6 @@ async function run() {
 		//
 		// Show the date.  The value of ORA_SDTZ affects the output
 		//
-
 		sql = `SELECT TO_CHAR(CURRENT_DATE, 'DD-Mon-YYYY HH24:MI') AS CD FROM DUAL`;
 		result = await connection.execute(sql, binds, options);
 		console.log("Current date query results: ");
