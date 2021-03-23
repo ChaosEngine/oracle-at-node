@@ -1,10 +1,10 @@
 # syntax = docker/dockerfile:experimental
 FROM node:lts-slim AS build
-RUN apt-get update && apt-get install -y libaio1 wget unzip
+RUN apt-get update && apt-get install -y libaio1 wget unzip && \
+	rm -rf /var/lib/apt/lists/*
 WORKDIR /app
-ADD package.json package-lock.json index.js dbconfig.js /app/
-RUN --mount=type=cache,target=/root/.npm --mount=type=cache,target=./node_modules \
-	npm install
+ADD package.json package-lock.json /app/
+RUN npm install
 
 RUN wget https://download.oracle.com/otn_software/linux/instantclient/211000/instantclient-basiclite-linux.x64-21.1.0.0.0.zip && \
 	unzip -o instantclient-basiclite-linux.x64-21.1.0.0.0.zip && \

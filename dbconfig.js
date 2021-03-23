@@ -72,7 +72,7 @@
  *
  *****************************************************************************/
 
-module.exports = {
+ module.exports = {
 	user: process.env.NODE_ORACLEDB_USER || "XXXXXXXXX",
 
 	// Get the password from the environment variable
