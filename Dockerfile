@@ -12,8 +12,8 @@ RUN wget https://download.oracle.com/otn_software/linux/instantclient/211000/ins
 	cd ./instantclient_21_1 && rm -f *jdbc* *occi* *mysql* *mql1* *ipc1* *jar uidrvci genezi adrci && \
 	cd ..
 
-COPY . .
-RUN cp ./wallet/* "$(pwd)"/instantclient_21_1/network/admin/
+COPY src/* .
+COPY ./wallet/* instantclient_21_1/network/admin/
 
 
 
