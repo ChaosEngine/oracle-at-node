@@ -25,9 +25,28 @@ async function run() {
 		// Create a table
 		//
 		const stmts = [
-			`DROP TABLE no_example`,
+			//`CREATE TABLE no_example (id NUMBER, data VARCHAR2(20))`,
+		
+			`DECLARE
+				ncount  NUMBER;
+				v_sql   LONG;
+			BEGIN
+				SELECT
+					COUNT(*)
+				INTO ncount
+				FROM
+					user_tables
+				WHERE
+					table_name = 'NO_EXAMPLE';
+			
+				IF ( ncount <= 0 ) THEN
+					v_sql := 'CREATE TABLE no_example (id NUMBER, data VARCHAR2(20))';
+					EXECUTE IMMEDIATE v_sql;
+				END IF;
+			
+			END;`,
 
-			`CREATE TABLE no_example (id NUMBER, data VARCHAR2(20))`
+			`DELETE FROM no_example`
 		];
 
 		for (const s of stmts) {
