@@ -1,3 +1,2 @@
 node_modules/
-instantclient_21_1/
-instantclient-*.zip
+src/dbconfig.js
