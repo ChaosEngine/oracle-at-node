@@ -9,8 +9,8 @@
   "author": "Chaos Engine",
   "license": "GPL",
   "dependencies": {
-    "eslint": "8.48.0",
-    "oracledb": "6.1.0",
+    "eslint": "8.52.0",
+    "oracledb": "6.2.0",
     "typescript": "5.2.2"
   }
 }
