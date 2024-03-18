@@ -9,8 +9,8 @@ dependencies:
     specifier: 8.57.0
     version: 8.57.0
   oracledb:
-    specifier: 6.3.0
-    version: 6.3.0
+    specifier: 6.4.0
+    version: 6.4.0
   typescript:
     specifier: 5.4.2
     version: 5.4.2
@@ -522,8 +522,8 @@ packages:
       type-check: 0.4.0
     dev: false
 
-  /oracledb@6.3.0:
-    resolution: {integrity: sha512-fr3U66QxgGXb5cs/ozLBQU50TMbZcBQEWvSaj2rJAXG8KRrsZcGOK8JTlZL1yJHeW8cSjOm6n/wTw3SJksGjDg==}
+  /oracledb@6.4.0:
+    resolution: {integrity: sha512-TJI08qzQlf/l7T49VojP9BoQpjEr14NXZmpSzzcLrbNs7qSl0QA/Mc9gGiEdkg5WmwH0wqUjtMC7jlf1WamlYA==}
     engines: {node: '>=14.6'}
     requiresBuild: true
     dev: false
