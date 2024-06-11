@@ -40,7 +40,7 @@ async function run() {
 					table_name = 'NO_EXAMPLE';
 			
 				IF ( ncount <= 0 ) THEN
-					v_sql := 'CREATE TABLE no_example (id NUMBER, data VARCHAR2(20))';
+					v_sql := 'CREATE TABLE no_example(id NUMBER not null PRIMARY KEY, data VARCHAR2(20))';
 					EXECUTE IMMEDIATE v_sql;
 				END IF;
 			
